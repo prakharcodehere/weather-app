@@ -1,0 +1,199 @@
+.weatherDetailContainer{
+    background-image: url("/public/clearnight.jpg");
+    background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.weatherWrapper{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 80vh;
+    
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contentWrapper{
+ 
+    width: 90%;
+    height: 90%;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgContainer{
+    width: 100%;
+height: 300px;    
+background-image: url("/public//weather.jpg");
+background-size: cover;
+border-top-left-radius: 32px;
+border-top-right-radius: 32px;
+
+}
+
+.feedContainer{
+    display: flex;
+    
+}
+.infoCard{
+    display: flex;
+    flex-direction: column;
+width: 30vw;
+height: 20vh;
+justify-content: center;
+align-items: center;
+    
+
+  background: rgba(255, 255, 255, 0.2);
+ 
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.weatherIcons{
+ color: white;
+height: 55px;
+width: 50px;
+
+}
+
+.bigInfoCard{
+    display: flex;
+    width: 30%;
+    height: 20vh;
+    background: rgba(255, 255, 255, 0.2);
+ 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 32px;
+}
+
+.innerInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    width: 50%;
+}
+.temp{
+    font-size: 2.75rem;
+    font-weight: 700;
+    color: white;
+}
+.dateBorder{
+   border: 2px solid #9ED8DB;
+    border-radius: 16px;
+    width: 70px;
+    height: auto;
+    font-size: .75rem;
+ text-align: center;   
+}
+
+
+.iconBox{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    margin-left: 4px;
+
+}
+
+.futureWeather{
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+}
+.futureInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+width: 8vw;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    color: white;
+    padding: 2px;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+
+.futureInfo:last-child{
+    border-bottom-right-radius: 32px;
+
+}
+.smallTempHead{
+    font-size: 22px;
+    font-weight: 400;
+    	
+text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.smallWindHead{
+    	
+text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+font-size: 10px;
+
+}
+
+.smallCloudHead{
+    font-size: 10px;
+    	
+text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.daysBox{
+width: 5vw;
+    border: 2px solid #AFE0CE;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-top: 12px;
+
+}
+
+.placeBox{
+    display: flex;
+    flex-direction: column;
+color: white;
+font-weight: 700;
+font-size: 2rem;
+margin-left: 20px;
+margin-top: 15px;
+}
+
+.cloudIcons{
+color: white;
+width: 50px;
+height: 50px;
+margin-top: 4px;
+}
+.iconBoxText{
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
