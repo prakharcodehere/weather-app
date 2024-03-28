@@ -29,7 +29,7 @@ const [showDropdown, setShowDropdown] = useState(false);
 
 
 
-
+  const apiKey = process.env.REACT_APP_WEATHER_APP_KEY;
 
 useEffect(() => {
 
@@ -37,6 +37,7 @@ useEffect(() => {
     const endDate = today.toISOString().slice(0, 10);
     const startDate = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10); 
 
+ 
 
   const fetchData = async () => {
     try {
