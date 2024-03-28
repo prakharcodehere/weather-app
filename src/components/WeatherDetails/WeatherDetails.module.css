@@ -38,7 +38,7 @@
 .imgContainer{
     width: 100%;
 height: 300px;    
-background-image: url("/public//weather.jpg");
+background-image: url("../../Assets/weather.jpg");
 background-size: cover;
 border-top-left-radius: 32px;
 border-top-right-radius: 32px;
@@ -204,11 +204,28 @@ align-items: center;
  
 }
 
+
+.utilityMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .searchIcon{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     opacity: 0.7;
 }
+
+.settingIcon{
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+}
+
+
 
 .cloudIcons{
 color: white;
@@ -222,6 +239,45 @@ margin-top: 4px;
     color: white;
     text-align: center;
 }
+
+.settingsBox {
+    position: relative;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    
+    width: 12vw;
+       
+  }
+  
+  .dropdownItem {
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 8px;
+    border: 2px solid gray;
+    height: 22px;
+    
+  }
+  .dropdownItem:first-child{
+    margin-top: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  
+  .dropdownItem:last-child {
+    margin-bottom: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  
+  .dropdownItem:hover{
+    border: 2px solid white;
+  }
+
 
 
 @media only screen and (max-width: 600px) {
@@ -252,6 +308,7 @@ margin-top: 4px;
     .temp{
         font-size: 24px;
         text-align: center;
+        margin-left: 5px;
     }
 
     .dateBorder{
@@ -267,8 +324,7 @@ margin-top: 4px;
     }
 
     .iconBox{
-        width: 12px;
-        height: 12px;
+       visibility:hidden;
 
     }
 
@@ -279,5 +335,16 @@ margin-top: 4px;
 
     .degree{
         font-size: 14px;
+    }
+
+
+    .cloudIcons{
+        width: 8px;
+        height: 8px;
+    }
+
+    .dropdownItem{
+     width: 20vw;
+     height: auto;
     }
 }
