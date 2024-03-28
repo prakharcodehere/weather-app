@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from "react-router-dom"
-import { input } from '@nextui-org/react';
+
 
 
 const Dashboard = ({setLocation}) => {
