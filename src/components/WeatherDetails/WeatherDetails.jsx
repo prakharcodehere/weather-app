@@ -7,10 +7,15 @@ import CloudQueueRoundedIcon from '@mui/icons-material/CloudQueueRounded';
 import axios from "axios"
 import styles from "./WeatherDetails.module.css"
 import { format, addDays } from 'date-fns';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import { useNavigate } from 'react-router-dom';
+
+
+
 const WeatherDetails = ({location}) => {
 const [loading, setLoading] = useState(false)
 const [weatherData, setWeatherData] = useState(null);
-
+const navigate = useNavigate();
 
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -48,14 +53,31 @@ useEffect(() => {
 }, [location]);
 
 
+
+
+
+const handleSearchClick = () => {
+
+  navigate('/');
+};
+
+
+
+
+
   return (
     <Box className={styles.weatherDetailContainer}>
       <Box className={styles.weatherWrapper}> 
   <Box className={styles.contentWrapper}>
   <Box className={styles.imgContainer}>
     <Box className={styles.placeBox}>
-    <Box>{weatherData?.city_name}</Box>
-<Box>{weatherData?.country_code}</Box>
+      <Box className={styles.areaContent}>    <Box>{weatherData?.city_name}</Box>
+<Box>{weatherData?.country_code}</Box></Box>
+
+
+<Box className={styles.searchIconBox}  onClick={handleSearchClick}>
+  <SearchRoundedIcon className={styles.searchIcon}/>
+</Box>
     </Box>
 
   </Box>
@@ -63,9 +85,9 @@ useEffect(() => {
 <Box className={styles.bigInfoCard}>
   <Box className={`${styles.innerInfo} ${styles.temp}`}>
 
-{weatherData?.data[0].temp}
+{weatherData?.data[0].temp}  
 
-
+<span className={styles.degree}>°F</span>
 <span className={styles.dateBorder}>Today's</span>
   </Box>
   <Box  className={styles.iconBox}>
@@ -84,7 +106,7 @@ const today = new Date()
   const dayOfWeek = daysOfWeek[date.getDay()];
 
  return (
-    <Box key={index} className={styles.futureInfo}>
+    <Box key={index} className={styles.futureInfo} >
      
       <Box className={styles.smallTempHead}> {day?.temp} °F</Box>
       <Box className={styles.smallWindHead}>Wind: {day?.wind_spd} mph</Box>

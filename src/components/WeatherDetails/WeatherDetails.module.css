@@ -103,7 +103,7 @@ width: 50px;
 .dateBorder{
    border: 2px solid #9ED8DB;
     border-radius: 16px;
-    width: 70px;
+    width: 60px;
     height: auto;
     font-size: .75rem;
  text-align: center;   
@@ -142,7 +142,9 @@ width: 8vw;
 
 }
 
-
+.degree{
+    font-size: 22px;
+}
 
 .futureInfo:last-child{
     border-bottom-right-radius: 32px;
@@ -167,6 +169,7 @@ font-size: 10px;
 text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 .daysBox{
+    
 width: 5vw;
     border: 2px solid #AFE0CE;
     border-radius: 12px;
@@ -177,12 +180,34 @@ width: 5vw;
 
 .placeBox{
     display: flex;
-    flex-direction: column;
+ 
+    justify-content: space-between;
 color: white;
 font-weight: 700;
 font-size: 2rem;
 margin-left: 20px;
 margin-top: 15px;
+}
+
+.areaContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.searchIconBox{
+   
+    width: 80px;
+    height: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+ 
+}
+
+.searchIcon{
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
 }
 
 .cloudIcons{
@@ -196,4 +221,63 @@ margin-top: 4px;
     font-weight: 400;
     color: white;
     text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .futureWeather {
+        display: flex;
+        justify-content: center;
+    }
+  
+    .bigInfoCard {
+        flex-basis: calc(60% - 10px); 
+    
+      
+    }
+  
+    .futureInfo {
+        width: 77px;
+        height: 19.3vh;
+    }
+  
+    .futureInfo:nth-child(n+2){
+        border-bottom-right-radius: 32px;
+    }
+   
+    .futureInfo:nth-child(n+3) {
+        visibility: hidden;
+    }
+    
+    .temp{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .dateBorder{
+        margin-top: 16px;
+        margin-left: 22px;
+    }
+    .daysBox{
+        width: 70px;
+        border: 2px solid #AFE0CE;
+        border-radius: 12px;
+        font-size: 12px;
+        margin-top: 12px;
+    }
+
+    .iconBox{
+        width: 12px;
+        height: 12px;
+
+    }
+
+
+    .iconBoxText{
+        visibility: hidden;
+    }
+
+    .degree{
+        font-size: 14px;
+    }
 }
